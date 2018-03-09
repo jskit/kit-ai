@@ -7,6 +7,7 @@
       data-index="{{index}}"
       data-page="{{item.page}}"
       data-type="{{item.type}}"
+      wx:if="{{item.status}}"
       >
         <view class="grid-item-wrapper">
           <image
