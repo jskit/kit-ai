@@ -143,6 +143,7 @@ Page({
       query = this.data.pages.list[index].query,
     } = e.currentTarget.dataset;
     // const page = this.data.pages.list[e.currentTarget.dataset.index].page;
+    // 注意要防止双击行为
     this.forward(page, query);
   },
 });

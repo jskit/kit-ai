@@ -1,5 +1,61 @@
 <!--pages/rmb/rmb.wxml-->
 
+<view>
+  <view class="kit-grid kit-grid-tpl kit-rmb" style="height: 100vh;">
+    <view class="kit-grid kit-grid-io">
+      <view class="kit-grid-item input orange">{{ money }}</view>
+      <view class="kit-grid-item output {{small}}">{{ rmb }}</view>
+    </view>
+    <view class="kit-grid kit-grid-keyboard" bindtap="onTap">
+      <view class="kit-grid-item a9" data-value="9">9</view>
+      <view class="kit-grid-item a8" data-value="8">8</view>
+      <view class="kit-grid-item a7" data-value="7">7</view>
+      <view class="kit-grid-item a6" data-value="6">6</view>
+      <view class="kit-grid-item a5" data-value="5">5</view>
+      <view class="kit-grid-item a4" data-value="4">4</view>
+      <view class="kit-grid-item a3" data-value="3">3</view>
+      <view class="kit-grid-item a2" data-value="2">2</view>
+      <view class="kit-grid-item a1" data-value="1">1</view>
+      <view class="kit-grid-item a0" data-value="0">0</view>
+      <view class="kit-grid-item dot" data-value=".">.</view>
+      <view class="kit-grid-item del" data-value="D">Del</view>
+      <view class="kit-grid-item ac orange" data-value="C">AC</view>
+    </view>
+  </view>
+</view>
+
+<!-- <div class="key-container">
+  <div class="key-title">请输入金额</div>
+  <div class="input-box">{{ money }}</div>
+  <div class="keyboard" bindtap="handleKeyPress">
+    <div class="key-row">
+      <div class="key-cell" data-num="7">7</div>
+      <div class="key-cell" data-num="8">8</div>
+      <div class="key-cell" data-num="9">9</div>
+      <div class="key-cell" data-num="D">C</div>
+    </div>
+    <div class="key-row">
+      <div class="key-cell" data-num="4">4</div>
+      <div class="key-cell" data-num="5">5</div>
+      <div class="key-cell" data-num="6">6</div>
+      <div class="key-cell" data-num="C">清空</div>
+    </div>
+    <div class="key-row">
+      <div class="key-cell" data-num="1">1</div>
+      <div class="key-cell" data-num="2">2</div>
+      <div class="key-cell" data-num="3">3</div>
+      <div class="key-cell" data-num="-1"></div>
+    </div>
+    <div class="key-row">
+      <div class="key-cell disabled" data-num="-1"></div>
+      <div class="key-cell" data-num=".">.</div>
+      <div class="key-cell" data-num="0">0</div>
+      <div class="key-cell" data-num="-1"></div>
+    </div>
+    <div class="key-confirm" data-num="S">确认</div>
+  </div>
+</div> -->
+
 <text>人民币大写在线转换工具
 
   输入小写数字金额：
