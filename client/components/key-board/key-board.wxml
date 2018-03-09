@@ -1,0 +1,24 @@
+<view>
+  <view class="kit-grid kit-grid-tpl calculator">
+    <view class="kit-grid-item a9">9</view>
+    <view class="kit-grid-item a7">7</view>
+    <view class="kit-grid-item a8">8</view>
+    <view class="kit-grid-item a6">6</view>
+    <view class="kit-grid-item a5">5</view>
+    <view class="kit-grid-item a4">4</view>
+    <view class="kit-grid-item a3">3</view>
+    <view class="kit-grid-item a2">2</view>
+    <view class="kit-grid-item a1">1</view>
+    <view class="kit-grid-item a0">0</view>
+    <view class="kit-grid-item dot">.</view>
+    <view class="kit-grid-item del">X</view>
+    <view class="kit-grid-item ac">AC</view>
+    <view class="kit-grid-item addition">+</view>
+    <view class="kit-grid-item subtraction">-</view>
+    <view class="kit-grid-item multiplication">x</view>
+    <view class="kit-grid-item viewision">/</view>
+    <view class="kit-grid-item percentage">%</view>
+    <view class="kit-grid-item equal">=</view>
+    <!-- <view class="kit-grid-item reverse">+/-</view> -->
+  </view>
+</view>
