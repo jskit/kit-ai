@@ -1,0 +1,16 @@
+<!-- pages/index/index.wxml -->
+
+<import src="../../components/lifecycle/lifecycle.wxml" />
+<import src="../../components/grid/grid.wxml" />
+
+<view class="container">
+  <view class="slogon">
+    <image src="../../img/logo.png" mode="scaleToFill" class="logo" />
+    <view class="info">
+      <text class="desc">为您提供一些常用工具</text>
+    </view>
+  </view>
+  <template is="grid" data="{{...pages}}" />
+</view>
+
+<template is="lifecycle" wx:if="{{debug}}"/>

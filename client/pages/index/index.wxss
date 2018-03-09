@@ -1,0 +1,28 @@
+/* pages/index/index.wxss */
+
+@import "../../components/lifecycle/lifecycle.wxss";
+@import '../../components/grid/grid.wxss';
+
+.slogon {
+  text-align: center;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.logo {
+  margin-top: 60rpx;
+  width: 90px;
+  height: 90px;
+}
+
+.info {
+  margin-top: 30rpx;
+  margin-bottom: 60rpx;
+}
+
+.desc {
+  font-size: 28rpx;
+  color: #888;
+}

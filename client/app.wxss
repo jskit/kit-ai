@@ -1,0 +1,238 @@
+
+
+page,
+view,
+block,
+text,
+swiper {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* * {
+  box-sizing: inherit;
+} */
+
+page {
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 32rpx;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #F7F7F7;
+  /* background: url('/img/loading.gif') center center no-repeat;
+  background-size: 64rpx 64rpx; */
+  border: 1px solid rgba(0,0,0,0);
+}
+
+.page-description {
+  margin-bottom: 32rpx;
+}
+
+.page-section {
+  background: #fff;
+  margin-bottom: 32rpx;
+}
+
+.page-section-title {
+  padding: 16rpx 32rpx;
+}
+
+.page-section-demo {
+  padding: 32rpx;
+}
+
+.page-section-btns {
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page-section-btns > view {
+  flex: 1;
+  height: 84rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #49a9ee;
+}
+.page-section-btns > view + view {
+  border-left: 1px solid #ddd;
+}
+
+button {
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+}
+
+.bc_blue {
+  background-color: #49A9EE;
+}
+
+.bc_red {
+  background-color: #F04134;
+}
+
+.bc_yellow {
+  background-color: #FFBF00;
+}
+
+.bc_green {
+  background-color: #00A854;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  height: 88rpx;
+  align-items: center;
+}
+
+.form-row-label {
+  width: 180rpx;
+  font-size: 34rpx;
+  margin-right: 10rpx;
+  text-align: left;
+  color: #000;
+}
+
+.form-row-content {
+  flex: 1;
+  font-size: 34rpx;
+}
+
+.form-line {
+  height: 1px;
+  background-color: #ddd;
+  margin-left: 30rpx;
+}
+
+.input {
+  color: #000;
+  font-size: 34rpx;
+  width: 100%;
+  padding: 4rpx 0;
+  border: 0;
+  line-height: 1;
+}
+
+/* .grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  width: 28%;
+  text-align: center;
+  padding-top: 28%;
+  margin-left: 4%;
+  margin-bottom: 4%;
+  position: relative;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+  background-color: white;
+}
+
+.grid-item-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid-icon {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.grid-text {
+  color: #000;
+  font-size: 28rpx;
+  line-height: 1;
+  margin-top: 28rpx;
+} */
+
+
+/* 内联元素不起效 */
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/*
+// Line clamp
+// http://dropshado.ws/post/1015351370/webkit-line-clamp
+@mixin text-max-line($lines: 2, $line-height: 1.5em) {
+  word-break: break-all;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines; // number of lines to show
+  overflow: hidden;
+  line-height: $line-height;
+  max-height: $line-height * $lines;
+  // height: $line-height * $lines;
+  // 不要使用 text-align: justify; 会导致文字和...重叠
+}
+*/
+.max-line-2,
+.max-line-3 {
+  word-break: break-all;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.;
+}
+
+/* 必须自己设定 max-height 并指定单位，不同字体大小高度不同，这里无法计算max-height */
+.max-line-2 {
+  -webkit-line-clamp: 2;
+  /* max-height: 2.6; */
+}
+.max-line-3 {
+  -webkit-line-clamp: 3;
+  /* max-height: 3.9; */
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.overhidden{
+  overflow: hidden;
+}
+.gray{
+  color: #959595;
+}
+.flex{
+  display: flex;
+}
+.block-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.v-center {
+  display: flex;
+  align-items: center;
+}
