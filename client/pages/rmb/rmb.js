@@ -107,8 +107,10 @@ Page({
 
     // 没有小数点
     if ( value.indexOf('.') === -1 ) {
-      // 如果当前为0，则直接等于输入值（排除再输入0）
-      if (value == 0 && value.length == 1 && Number(input.charAt(0)) !== 0) {
+      // 如果当前为0，则直接等于输入值
+      if (value === '0' && value.length == 1) {
+        // 排除再输入0
+        if (Number(input.charAt(0)) === 0) return;
         newValue = input;
       } else {
         newValue += input;
