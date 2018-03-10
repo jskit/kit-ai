@@ -29,9 +29,9 @@
 .grid-item.is-doing {
   background: rgba(255, 191, 0, 0.5);
 }
-.grid-item.is-done {
+/* .grid-item.is-done {
   background: rgba(0, 168, 84, 0.5);
-}
+} */
 
 .grid-item-wrapper {
   position: absolute;

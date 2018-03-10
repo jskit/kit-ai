@@ -1,12 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/rmb/rmb",
-    "pages/bank/bank",
-    "pages/phone/phone",
-    "pages/ip/ip",
-    "pages/rank/rank",
-    "pages/book/book"
+    "pages/rmb/rmb"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -8,6 +8,7 @@
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-gap: 1px;
+  border-bottom: 1px solid #e9eaec;
   background: #e9eaec;
 }
 
@@ -103,9 +104,21 @@
 .kit-grid-tpl .output { grid-area: output; }
 .kit-grid-tpl .output.small { font-size: 48rpx; }
 
-
 .orange {
   color: #f2872e;
+}
+
+.kit-panel {
+  margin: 32rpx 0;
+}
+.kit-panel .title {
+  margin: 32rpx 0 16rpx;
+  padding: 0 32rpx;
+  font-size: 36rpx;
+}
+.kit-panel .content {
+  margin: 16rpx 0;
+  padding: 0 32rpx;
 }
 
 /* .kit-grid-tpl {

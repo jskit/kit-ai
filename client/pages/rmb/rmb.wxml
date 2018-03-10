@@ -24,50 +24,18 @@
   </view>
 </view>
 
-<!-- <div class="key-container">
-  <div class="key-title">请输入金额</div>
-  <div class="input-box">{{ money }}</div>
-  <div class="keyboard" bindtap="handleKeyPress">
-    <div class="key-row">
-      <div class="key-cell" data-num="7">7</div>
-      <div class="key-cell" data-num="8">8</div>
-      <div class="key-cell" data-num="9">9</div>
-      <div class="key-cell" data-num="D">C</div>
-    </div>
-    <div class="key-row">
-      <div class="key-cell" data-num="4">4</div>
-      <div class="key-cell" data-num="5">5</div>
-      <div class="key-cell" data-num="6">6</div>
-      <div class="key-cell" data-num="C">清空</div>
-    </div>
-    <div class="key-row">
-      <div class="key-cell" data-num="1">1</div>
-      <div class="key-cell" data-num="2">2</div>
-      <div class="key-cell" data-num="3">3</div>
-      <div class="key-cell" data-num="-1"></div>
-    </div>
-    <div class="key-row">
-      <div class="key-cell disabled" data-num="-1"></div>
-      <div class="key-cell" data-num=".">.</div>
-      <div class="key-cell" data-num="0">0</div>
-      <div class="key-cell" data-num="-1"></div>
-    </div>
-    <div class="key-confirm" data-num="S">确认</div>
-  </div>
-</div> -->
-
-<text>人民币大写在线转换工具
-
-  输入小写数字金额：
-  显示中文大写金额：
-
-  输入待转换数字金额
-
-  <!-- Result.value = convertCurrency(Digits.value); -->
-
-人民币符号:¥；美元符号：$；欧元符号：€；英镑符号：￡（货币符号可直接鼠标选中后复制使用）。
-
-使用说明：
-中文大写金额数字到“元”为止的，在“元”之后、应写“整”(或“正”)字；在“角”之后，可以不写“整”(或“正”)字；大写金额数字有“分”的，“分”后面不写“整”(或“正”)字。
-</text>
-
+<view class="kit-panel">
+  <view class="title">人民币大写：</view>
+  <view class="content">零 壹 贰 叁 肆 伍 陆 柒 捌 玖</view>
+  <view class="content">亿 万 仟 佰 拾 元(圆)整 角 分</view>
+  <view class="title">使用说明：</view>
+  <view class="content">
+    中文大写金额数字到“元”为止的，在“元”之后、应写“整”；在“角”之后，可以不写“整”；大写金额数字有“分”的，“分”后面不写“整”字。
+  </view>
+  <view class="content">
+    人民币: ¥
+    美元: $
+    欧元: €
+    英镑: ￡
+  </view>
+</view>

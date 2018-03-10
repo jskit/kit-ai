@@ -5,7 +5,7 @@
 
 <view class="container">
   <view class="slogon">
-    <image src="../../img/logo.png" mode="scaleToFill" class="logo" />
+    <image src="../../img/ai.png" mode="scaleToFill" class="logo" />
     <view class="info">
       <text class="desc">为您提供一些常用工具</text>
     </view>

@@ -17,8 +17,8 @@
   height: 90px;
 }
 
-.info {
-  margin-top: 30rpx;
+.slogon .info {
+  margin-top: -20rpx;
   margin-bottom: 60rpx;
 }
 
