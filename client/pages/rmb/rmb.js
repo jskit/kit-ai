@@ -128,8 +128,8 @@ Page({
   updateValue(newValue) {
     const { input } = this.data;
     if (newValue === input) return;
-    // if (newValue.split('.')[0].length > 12) {
-    if (newValue.length > 12) {
+    if (newValue.split('.')[0].length > 12) {
+    // if (newValue.length > 12) {
       wx.showToast('你的钱太多了');
       return;
     };

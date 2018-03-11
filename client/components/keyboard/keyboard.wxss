@@ -1,0 +1,124 @@
+/* keyboard 键盘 */
+
+.kit-grid-panel {
+  font-size: 48rpx;
+  color: #686b74;
+}
+
+.kit-grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 1px;
+  border-bottom: 1px solid #e9eaec;
+  background: #e9eaec;
+}
+
+.kit-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f8fa;
+}
+
+.kit-grid-item:active {
+  background: #f1f3f2;
+}
+
+.kit-grid-panel {
+  display: grid;
+  grid-template-areas:
+    "io"
+    "keyboard";
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.kit-grid-panel .kit-grid-io { grid-area: io; }
+.kit-grid-panel .kit-grid-keyboard { grid-area: keyboard; }
+
+.kit-grid-panel .kit-grid-io {
+  height: 40vh;
+  grid-template-areas:
+    "input"
+    "output";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.kit-grid-io .input,
+.kit-grid-io .output {
+  padding: 16rpx 32rpx;
+  /* height: 100%; */
+  height: 20vh;
+  overflow: hidden;
+  /* align-self: end; */
+  justify-content: flex-end;
+  font-size: 56rpx;
+  background: #f1f3f2;
+  justify-items: end;
+}
+
+.kit-grid-io .input { grid-area: input; }
+.kit-grid-io .output { grid-area: output; }
+.kit-grid-io .output.small { font-size: 48rpx; }
+
+.orange {
+  color: #f2872e;
+}
+
+.kit-grid-keyboard .a0 { grid-area: a0; }
+.kit-grid-keyboard .a1 { grid-area: a1; }
+.kit-grid-keyboard .a2 { grid-area: a2; }
+.kit-grid-keyboard .a3 { grid-area: a3; }
+.kit-grid-keyboard .a4 { grid-area: a4; }
+.kit-grid-keyboard .a5 { grid-area: a5; }
+.kit-grid-keyboard .a6 { grid-area: a6; }
+.kit-grid-keyboard .a7 { grid-area: a7; }
+.kit-grid-keyboard .a8 { grid-area: a8; }
+.kit-grid-keyboard .a9 { grid-area: a9; }
+.kit-grid-keyboard .ac { grid-area: ac; }
+.kit-grid-keyboard .dot { grid-area: dot; }
+.kit-grid-keyboard .del { grid-area: del; }
+.kit-grid-keyboard .addition { grid-area: addition; }
+.kit-grid-keyboard .subtraction { grid-area: subtraction; }
+.kit-grid-keyboard .multiplication { grid-area: multiplication; }
+.kit-grid-keyboard .division { grid-area: division; }
+.kit-grid-keyboard .percentage { grid-area: percentage; }
+.kit-grid-keyboard .reverse { grid-area: reverse; }
+.kit-grid-keyboard .equal { grid-area: equal; }
+
+.kit-grid-keyboard.rmb {
+  height: 60vh;
+  grid-template-areas:
+    "a7 a8 a9 ac"
+    "a4 a5 a6 ac"
+    "a1 a2 a3 del"
+    "a0 a0 dot del";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+.kit-grid-keyboard.calculator {
+  grid-template-areas:
+    "ac del percentage division"
+    "a7 a8 a9 multiplication"
+    "a4 a5 a6 subtraction"
+    "a1 a2 a3 addition"
+    "a0 a0 dot equal";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+/* .kit-grid-tpl {
+  display: grid;
+  grid-template-areas:
+    "input input input input"
+    "output output output output"
+    "a7 a8 a9 ac"
+    "a4 a5 a6 ac"
+    "a1 a2 a3 del"
+    "a0 a0 dot del";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+} */

@@ -1,12 +1,12 @@
 <!--pages/rmb/rmb.wxml-->
 
 <view>
-  <view class="kit-grid kit-grid-tpl kit-rmb" style="height: 100vh;">
+  <view class="kit-grid kit-grid-panel kit-rmb" style="height: 100vh;">
     <view class="kit-grid kit-grid-io">
       <view class="kit-grid-item input orange">{{ formatInput }}</view>
       <view class="kit-grid-item output {{styleSmall}}">{{ output }}</view>
     </view>
-    <view class="kit-grid kit-grid-keyboard" bindtap="onTap">
+    <view class="kit-grid kit-grid-keyboard rmb" bindtap="onTap">
       <view class="kit-grid-item a9" data-value="9">9</view>
       <view class="kit-grid-item a8" data-value="8">8</view>
       <view class="kit-grid-item a7" data-value="7">7</view>
