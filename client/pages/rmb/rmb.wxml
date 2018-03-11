@@ -3,8 +3,8 @@
 <view>
   <view class="kit-grid kit-grid-tpl kit-rmb" style="height: 100vh;">
     <view class="kit-grid kit-grid-io">
-      <view class="kit-grid-item input orange">{{ money }}</view>
-      <view class="kit-grid-item output {{small}}">{{ rmb }}</view>
+      <view class="kit-grid-item input orange">{{ formatInput }}</view>
+      <view class="kit-grid-item output {{styleSmall}}">{{ output }}</view>
     </view>
     <view class="kit-grid kit-grid-keyboard" bindtap="onTap">
       <view class="kit-grid-item a9" data-value="9">9</view>

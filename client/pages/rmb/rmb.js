@@ -2,10 +2,10 @@
 import convertCurrency from './convertCurrency';
 
 const defaultValue = {
-  value: '0',
-  money: '0',
-  rmb: '零元整',
-  small: '',
+  input: '0',
+  formatInput: '0',
+  output: '零元整',
+  styleSmall: '',
 };
 
 // const rmbReg = /^((\d{1,3}(,\d{3})*(.((\d{3},)*\d{1,3}))?)|(\d+(.\d+)?))$/;
@@ -61,26 +61,26 @@ Page({
 
   // 处理小数点
   handleDecimalPoint() {
-    let { value } = this.data;
+    let { input } = this.data;
     // 如果包含小数点，直接返回
-    if (value.indexOf('.') > -1) return false;
+    if (input.indexOf('.') > -1) return false;
     // 如果小数点是第一位，补0
-    if (!value.length) {
-      value = '0.';
+    if (!input.length) {
+      input = '0.';
     } else {
-      value += '.';
+      input += '.';
     }
-    this.updateValue(value);
+    this.updateValue(input);
   },
 
   // 删除键
   handleDeleteKey() {
-    let { value } = this.data;
+    let { input } = this.data;
     // 如果没有输入，直接返回
-    if (!value.length) return false;
+    if (!input.length) return false;
     // 否则删除最后一个
-    value = value.substring(0, value.length - 1);
-    this.updateValue(value);
+    input = input.substring(0, input.length - 1);
+    this.updateValue(input);
   },
 
   // 清空键
@@ -101,45 +101,44 @@ Page({
    * @param {any} money
    * @returns
    */
-  handleNumberKey(input) {
-    const { value } = this.data;
-    let newValue = value;
+  handleNumberKey(newValue) {
+    let { input } = this.data;
 
     // 没有小数点
-    if ( value.indexOf('.') === -1 ) {
+    if ( input.indexOf('.') === -1 ) {
       // 如果当前为0，则直接等于输入值
-      if (value === '0' && value.length == 1) {
+      if (input === '0' && input.length == 1) {
         // 排除再输入0
-        if (Number(input.charAt(0)) === 0) return;
-        newValue = input;
+        if (Number(newValue.charAt(0)) === 0) return;
+        input = newValue;
       } else {
-        newValue += input;
+        input += newValue;
       };
     } else {
       // 如果有小数点且小数点位数不小于2
-      if (value.substring(value.indexOf('.') + 1).length < 2) {
-        newValue += input;
+      if (input.substring(input.indexOf('.') + 1).length < 2) {
+        input += newValue;
       } else {
         wx.showToast('最多两位小数');
       }
     }
-    this.updateValue(newValue);
+    this.updateValue(input);
   },
 
   updateValue(newValue) {
-    const { value } = this.data;
-    if (newValue === value) return;
+    const { input } = this.data;
+    if (newValue === input) return;
     // if (newValue.split('.')[0].length > 12) {
     if (newValue.length > 12) {
       wx.showToast('你的钱太多了');
       return;
     };
-    const rmb = convertCurrency(newValue);
+    const output = convertCurrency(newValue);
     this.setData({
-      value: newValue,
-      money: formatCurrency(newValue),
-      rmb,
-      small: rmb.length > 10 ? 'small' : '',
+      input: newValue,
+      formatInput: formatCurrency(newValue),
+      output,
+      styleSmall: output.length > 10 ? 'small' : '',
     });
   },
 })
