@@ -1,0 +1,43 @@
+<!--pages/relative/relative.wxml-->
+
+<view>
+  <view class="kit-grid kit-grid-tpl kit-relative" style="height: 100vh;">
+    <view class="kit-grid kit-grid-io">
+      <view class="kit-grid-item input orange">{{ money }}</view>
+      <view class="kit-grid-item output {{small}}">{{ rmb }}</view>
+    </view>
+    <view class="kit-grid kit-grid-keyboard" bindtap="onTap">
+      <view class="kit-grid-item a9" data-value="9">夫</view>
+      <view class="kit-grid-item a8" data-value="8">妻</view>
+      <view class="kit-grid-item a7" data-value="7">兄</view>
+      <view class="kit-grid-item a6" data-value="6">弟</view>
+      <view class="kit-grid-item a5" data-value="5">姐</view>
+      <view class="kit-grid-item a4" data-value="4">妹</view>
+      <view class="kit-grid-item a3" data-value="3">父</view>
+      <view class="kit-grid-item a2" data-value="2">母</view>
+      <view class="kit-grid-item a1" data-value="1">子</view>
+      <view class="kit-grid-item a0" data-value="0">女</view>
+      <view class="kit-grid-item dot" data-value=".">.</view>
+      <view class="kit-grid-item del" data-value="D">Del</view>
+      <view class="kit-grid-item ac orange" data-value="C">AC</view>
+      <view class="kit-grid-item" data-value="C">互查</view>
+      <view class="kit-grid-item sure" data-value="sure">=</view>
+    </view>
+  </view>
+</view>
+
+<view class="kit-panel">
+  <view class="title">人民币大写：</view>
+  <view class="content">零 壹 贰 叁 肆 伍 陆 柒 捌 玖</view>
+  <view class="content">亿 万 仟 佰 拾 元(圆)整 角 分</view>
+  <view class="title">使用说明：</view>
+  <view class="content">
+    中文大写金额数字到“元”为止的，在“元”之后、应写“整”；在“角”之后，可以不写“整”；大写金额数字有“分”的，“分”后面不写“整”字。
+  </view>
+  <view class="content">
+    人民币: ¥
+    美元: $
+    欧元: €
+    英镑: ￡
+  </view>
+</view>

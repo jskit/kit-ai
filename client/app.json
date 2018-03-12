@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/rmb/rmb"
+    "pages/rmb/rmb",
+    "pages/calculator/calculator"
   ],
   "window": {
     "backgroundTextStyle": "light",

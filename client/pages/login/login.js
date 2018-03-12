@@ -53,9 +53,6 @@ Page({
           userInfo: data,
         });
         console.log('登录成功');
-        setTimeout(() => {
-          wx.navigateBack();
-        }, 800);
       } else {
         wx.showToast('用户登录信息有误，请重新登录');
         this.setData({
@@ -63,14 +60,21 @@ Page({
           cantry: true,
         });
       }
+      this.loginBack();
     }, (err) => {
       this.setData({
         content: '登录失败!',
         cantry: true,
       });
-      // return true;
+      // this.loginBack();
+      return true;
       // console.log(err);
     });
+  },
+  loginBack() {
+    setTimeout(() => {
+      wx.navigateBack();
+    }, 800);
   },
   goLogin() {
     // 登录前，先清除下之前登录相关的缓存数据
@@ -89,6 +93,7 @@ Page({
     });
   },
   getAuth(resolve, reject) {
+    const that = this;
     wx.login({
       success(auth) {
         if (auth.code) {
@@ -105,8 +110,18 @@ Page({
               });
               console.log(res);
             },
-            fail(err) {
-
+            fail(err = {}) {
+              // {errMsg: "getUserInfo:fail auth deny"}
+              if (err.errMsg === 'getUserInfo:fail auth deny') {
+                // 获取用户信息授权失败，展示引导
+                that.setData({
+                  content: '获取用户信息授权失败，你需要开启授权：右上角 -> 点击“关于好食期” -> 右上角 -> 点击“设置” -> 允许使用“用户信息”',
+                  cantry: false,
+                });
+              } else {
+                wx.showToast(err.errMsg);
+                that.loginBack();
+              }
             },
           });
         } else {

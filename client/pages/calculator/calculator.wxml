@@ -1,0 +1,48 @@
+<!--pages/calculator/calculator.wxml-->
+
+<view>
+  <view class="kit-grid kit-grid-panel kit-calculator" style="height: 100vh;">
+    <view class="kit-grid kit-grid-io">
+      <view class="kit-grid-item input orange">{{ formatInput }}</view>
+      <view class="kit-grid-item output {{styleSmall}}">{{ output }}</view>
+    </view>
+    <view class="kit-grid kit-grid-keyboard calculator" bindtap="onTap">
+      <view class="kit-grid-item a9">9</view>
+      <view class="kit-grid-item a7">7</view>
+      <view class="kit-grid-item a8">8</view>
+      <view class="kit-grid-item a6">6</view>
+      <view class="kit-grid-item a5">5</view>
+      <view class="kit-grid-item a4">4</view>
+      <view class="kit-grid-item a3">3</view>
+      <view class="kit-grid-item a2">2</view>
+      <view class="kit-grid-item a1">1</view>
+      <view class="kit-grid-item a0">0</view>
+      <view class="kit-grid-item dot">.</view>
+      <view class="kit-grid-item del">X</view>
+      <view class="kit-grid-item ac">AC</view>
+      <view class="kit-grid-item addition">+</view>
+      <view class="kit-grid-item subtraction">-</view>
+      <view class="kit-grid-item multiplication">x</view>
+      <view class="kit-grid-item viewision">/</view>
+      <view class="kit-grid-item percentage">%</view>
+      <view class="kit-grid-item equal">=</view>
+      <!-- <view class="kit-grid-item reverse">+/-</view> -->
+    </view>
+  </view>
+</view>
+
+<view class="kit-panel">
+  <view class="title">人民币大写：</view>
+  <view class="content">零 壹 贰 叁 肆 伍 陆 柒 捌 玖</view>
+  <view class="content">亿 万 仟 佰 拾 元(圆)整 角 分</view>
+  <view class="title">使用说明：</view>
+  <view class="content">
+    中文大写金额数字到“元”为止的，在“元”之后、应写“整”；在“角”之后，可以不写“整”；大写金额数字有“分”的，“分”后面不写“整”字。
+  </view>
+  <view class="content">
+    人民币: ¥
+    美元: $
+    欧元: €
+    英镑: ￡
+  </view>
+</view>

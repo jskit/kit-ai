@@ -1,0 +1,20 @@
+/* pages/calculator/calculator.wxss */
+@import '../../components/keyboard/keyboard.wxss';
+
+.kit-calculator {
+
+}
+
+
+.kit-panel {
+  margin: 32rpx 0;
+}
+.kit-panel .title {
+  margin: 32rpx 0 16rpx;
+  padding: 0 32rpx;
+  font-size: 36rpx;
+}
+.kit-panel .content {
+  margin: 16rpx 0;
+  padding: 0 32rpx;
+}
