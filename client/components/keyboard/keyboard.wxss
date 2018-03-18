@@ -5,6 +5,12 @@
   color: #686b74;
 }
 
+.icon-del {
+  display: inline-block;
+  width: 64rpx;
+  height: 32rpx;
+}
+
 .kit-grid {
   display: grid;
   grid-template-columns: auto;
@@ -36,16 +42,17 @@
   grid-template-rows: auto;
 }
 
-.kit-grid-panel .kit-grid-io {
+.kit-grid-io {
+  position: relative;
   height: 40vh;
   grid-area: io;
   grid-template-areas:
-  "input"
-  "output";
+    "input"
+    "output";
   grid-template-columns: 1fr;
   grid-template-rows: auto;
 }
-.kit-grid-panel .kit-grid-keyboard {
+.kit-grid-keyboard {
   grid-area: keyboard;
   height: 60vh;
 }
@@ -60,7 +67,6 @@
   justify-content: flex-end;
   font-size: 56rpx;
   background: #f1f3f2;
-  justify-items: end;
 }
 
 .kit-grid-io .input { grid-area: input; }
@@ -92,8 +98,9 @@
 .kit-grid-keyboard .reverse { grid-area: reverse; }
 .kit-grid-keyboard .equal { grid-area: equal; }
 
+/* 这种布局是否是最合适的 */
+/* 人民币大写 */
 .kit-grid-keyboard.rmb {
-  height: 60vh;
   grid-template-areas:
     "a7 a8 a9 ac"
     "a4 a5 a6 ac"
@@ -103,16 +110,36 @@
   grid-template-columns: auto;
   grid-template-rows: auto;
 }
-.kit-grid-keyboard.calculator {
+.kit-rmb .kit-grid-io {
+  height: 40vh;
+}
+.kit-rmb .kit-grid-keyboard.rmb {
   height: 60vh;
+}
+.kit-rmb .kit-grid-io .input {
+  height: 22vh;
+}
+.kit-rmb .kit-grid-io .output {
+  height: 18vh;
+}
+
+/* 计算器 */
+.kit-grid-keyboard.calculator {
   grid-template-areas:
-    "ac del percentage division"
+    "ac reverse division del"
     "a7 a8 a9 multiplication"
     "a4 a5 a6 subtraction"
     "a1 a2 a3 addition"
-    "a0 a0 dot equal";
+    "a0 dot percentage equal";
   grid-template-columns: auto;
   grid-template-rows: auto;
+}
+
+.kit-calculator .kit-grid-io {
+  height: 40vh;
+}
+.kit-calculator .kit-grid-keyboard {
+  height: 60vh;
 }
 
 /* .kit-grid-tpl {

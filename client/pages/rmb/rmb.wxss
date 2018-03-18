@@ -4,17 +4,29 @@
 .kit-rmb {
 
 }
-
-
-.kit-panel {
-  margin: 32rpx 0;
-}
-.kit-panel .title {
-  margin: 32rpx 0 16rpx;
-  padding: 0 32rpx;
+.symbol-rmb {
   font-size: 36rpx;
+  padding: 0 8rpx 8rpx 0;
 }
-.kit-panel .content {
-  margin: 16rpx 0;
-  padding: 0 32rpx;
+.kit-grid-io .input {
+  align-items: flex-end;
+  padding-bottom: 32rpx;
+  height: 22vh;
+}
+.kit-grid-io .output {
+  height: 18vh;
+}
+.kit-grid-io .explain {
+  font-size: 32rpx;
+  position: absolute;
+  top: 16rpx;
+  right: 32rpx;
+  color: #3CC51F;
+}
+.kit-grid-io .knowledge {
+  position: absolute;
+  left: 32rpx;
+  top: 16rpx;
+  font-size: 36rpx;
+  color: #999;
 }

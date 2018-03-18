@@ -3,7 +3,15 @@
 <view>
   <view class="kit-grid kit-grid-panel kit-rmb" style="height: 100vh;">
     <view class="kit-grid kit-grid-io">
-      <view class="kit-grid-item input orange">{{ formatInput }}</view>
+      <view class="explain" bindtap="onClick" data-type="explain">说明</view>
+      <view class="knowledge">
+        <view class="k1">壹 贰 叁 肆 伍 陆 柒 捌 玖 零</view>
+        <view class="k1">亿 万 仟 佰 拾 元(圆)整 角 分</view>
+      </view>
+      <view class="kit-grid-item input orange">
+        <text class="symbol-rmb">¥</text>
+        <text>{{ formatInput }}</text>
+      </view>
       <view class="kit-grid-item output {{styleSmall}}">{{ output }}</view>
     </view>
     <view class="kit-grid kit-grid-keyboard rmb" bindtap="onTap">
@@ -18,24 +26,10 @@
       <view class="kit-grid-item a1" data-value="1">1</view>
       <view class="kit-grid-item a0" data-value="0">0</view>
       <view class="kit-grid-item dot" data-value=".">.</view>
-      <view class="kit-grid-item del" data-value="D">Del</view>
+      <view class="kit-grid-item del" data-value="D">
+        <image class="icon-del" src="../../img/del.png" mode="aspectFit" />
+      </view>
       <view class="kit-grid-item ac orange" data-value="C">AC</view>
     </view>
-  </view>
-</view>
-
-<view class="kit-panel">
-  <view class="title">人民币大写：</view>
-  <view class="content">零 壹 贰 叁 肆 伍 陆 柒 捌 玖</view>
-  <view class="content">亿 万 仟 佰 拾 元(圆)整 角 分</view>
-  <view class="title">使用说明：</view>
-  <view class="content">
-    中文大写金额数字到“元”为止的，在“元”之后、应写“整”；在“角”之后，可以不写“整”；大写金额数字有“分”的，“分”后面不写“整”字。
-  </view>
-  <view class="content">
-    人民币: ¥
-    美元: $
-    欧元: €
-    英镑: ￡
   </view>
 </view>

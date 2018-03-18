@@ -110,7 +110,8 @@ Page({
     if (newValue === input) return;
     if (newValue.split('.')[0].length > 12) {
     // if (newValue.length > 12) {
-      wx.showToast('你的钱太多了');
+      wx.showToast('你的 💰 已经撑爆 👛 了');
+      // wx.showToast('Your 💰 has exploded your 👛');
       return;
     };
     const output = convertCurrency(newValue);
@@ -120,5 +121,21 @@ Page({
       output,
       styleSmall: output.length > 10 ? 'small' : '',
     });
+  },
+
+  onClick(e) {
+    let { type = '' } = e.target.dataset;
+    switch (type) {
+      case 'explain':
+        wx.showModal({
+          content: '中文大写金额数字到“元”为止的，在“元”之后应写“整”字；“分”后不写“整”字，“角”后可不写。',
+          showCancel: false,
+          confirmText: '知道了',
+          // confirmColor: '',
+        });
+        break;
+      default:
+        // do nothing...
+    }
   },
 })

@@ -25,18 +25,18 @@ Page({
         //   page: 'index',
         //   status: '',
         // },
-        {
-          icon: '../../img/loan.png',
-          title: '房贷计算',
-          page: 'loan',
-          status: 'todo',
-        },
-        {
-          icon: '../../img/tax.png',
-          title: '个人所得税',
-          page: 'tax',
-          status: 'todo',
-        },
+        // {
+        //   icon: '../../img/loan.png',
+        //   title: '房贷计算',
+        //   page: 'loan',
+        //   status: 'todo',
+        // },
+        // {
+        //   icon: '../../img/tax.png',
+        //   title: '个人所得税',
+        //   page: 'tax',
+        //   status: 'todo',
+        // },
         {
           icon: '../../img/rmb.png',
           title: '人民币大写',
@@ -55,12 +55,12 @@ Page({
         //   page: 'index',
         //   status: '',
         // },
-        {
-          icon: '../../img/relative.png',
-          title: '亲戚称呼计算',
-          page: 'relative',
-          status: 'todo',
-        },
+        // {
+        //   icon: '../../img/relative.png',
+        //   title: '亲戚称呼计算',
+        //   page: 'relative',
+        //   status: 'todo',
+        // },
         // 成语接龙
         // 启蒙游戏(受iphone待机输入密码界面启发，幼儿对点击坑洞有兴趣，可以做交互行为，引导点击并触发奖励)
         // 信息流
