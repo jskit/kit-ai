@@ -15,16 +15,16 @@
       <view class="kit-grid-item output {{styleSmall}}">{{ output }}</view>
     </view>
     <view class="kit-grid kit-grid-keyboard rmb" bindtap="onTap">
-      <view class="kit-grid-item a9" data-value="9">9</view>
-      <view class="kit-grid-item a8" data-value="8">8</view>
-      <view class="kit-grid-item a7" data-value="7">7</view>
-      <view class="kit-grid-item a6" data-value="6">6</view>
-      <view class="kit-grid-item a5" data-value="5">5</view>
-      <view class="kit-grid-item a4" data-value="4">4</view>
-      <view class="kit-grid-item a3" data-value="3">3</view>
-      <view class="kit-grid-item a2" data-value="2">2</view>
-      <view class="kit-grid-item a1" data-value="1">1</view>
-      <view class="kit-grid-item a0" data-value="0">0</view>
+      <view class="kit-grid-item numer a1" data-value="1">1</view>
+      <view class="kit-grid-item numer a2" data-value="2">2</view>
+      <view class="kit-grid-item numer a3" data-value="3">3</view>
+      <view class="kit-grid-item numer a4" data-value="4">4</view>
+      <view class="kit-grid-item numer a5" data-value="5">5</view>
+      <view class="kit-grid-item numer a6" data-value="6">6</view>
+      <view class="kit-grid-item numer a7" data-value="7">7</view>
+      <view class="kit-grid-item numer a8" data-value="8">8</view>
+      <view class="kit-grid-item numer a9" data-value="9">9</view>
+      <view class="kit-grid-item numer a0" data-value="0">0</view>
       <view class="kit-grid-item dot" data-value=".">.</view>
       <view class="kit-grid-item del" data-value="D">
         <image class="icon-del" src="../../img/del.png" mode="aspectFit" />

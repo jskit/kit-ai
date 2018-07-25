@@ -2,7 +2,7 @@
 
 <view>
   <view class="kit-grid kit-grid-panel kit-calculator" style="height: 100vh;">
-    <view class="kit-grid kit-grid-io">
+    <view class="kit-grid kit-grid-io no-border">
       <view class="explain" bindtap="onClick" data-type="explain">说明</view>
       <view class="knowledge">
         <view class="k1">status</view>

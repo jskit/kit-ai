@@ -20,6 +20,10 @@
   background: #e9eaec;
 }
 
+.kit-grid.no-border {
+  grid-gap: 0;
+}
+
 .kit-grid-item {
   display: flex;
   align-items: center;
@@ -75,6 +79,9 @@
 
 .orange {
   color: #f2872e;
+}
+.green {
+  color: #3CC51F;
 }
 
 .kit-grid-keyboard .a0 { grid-area: a0; }
@@ -136,12 +143,17 @@
 }
 
 .kit-calculator .kit-grid-io {
-  height: 40vh;
+  height: 30vh;
 }
 .kit-calculator .kit-grid-keyboard {
-  height: 60vh;
+  height: 70vh;
 }
-
+.kit-calculator .kit-grid-io .input {
+  height: 15vh;
+}
+.kit-calculator .kit-grid-io .output {
+  height: 15vh;
+}
 /* .kit-grid-tpl {
   display: grid;
   grid-template-areas:
